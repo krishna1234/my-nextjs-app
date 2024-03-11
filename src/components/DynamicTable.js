@@ -3,9 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import _ from "lodash";
 
 export default function DataTable(data) {
-    console.log(data && data);
     const allKeys = _.union(...data?.data.map((obj) => _.keys(obj)));
-    console.log(allKeys);
 
     const columns = allKeys.map((key) => {
         return {
